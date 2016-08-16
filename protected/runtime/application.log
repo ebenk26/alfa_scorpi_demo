@@ -1,0 +1,98 @@
+2016/07/13 11:39:13 [error] [php] Invalid argument supplied for foreach() (/Applications/XAMPP/xamppfiles/htdocs/alfa_scorpi/protected/views/dashboard/index.php:86)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(869): DashboardController->renderFile()
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(782): DashboardController->renderPartial()
+#2 /Applications/XAMPP/xamppfiles/htdocs/alfa_scorpi/protected/controllers/DashboardController.php(271): DashboardController->render()
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(49): DashboardController->actionIndex()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(286): DashboardController->runAction()
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(265): DashboardController->runActionWithFilters()
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): DashboardController->run()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /Applications/XAMPP/xamppfiles/htdocs/alfa_scorpi/index.php(13): CWebApplication->run()
+REQUEST_URI=/alfa_scorpi/index.php/dashboard
+in /Applications/XAMPP/xamppfiles/htdocs/alfa_scorpi/protected/views/dashboard/index.php (86)
+in /Applications/XAMPP/xamppfiles/htdocs/alfa_scorpi/protected/controllers/DashboardController.php (271)
+in /Applications/XAMPP/xamppfiles/htdocs/alfa_scorpi/index.php (13)
+2016/07/13 11:45:12 [error] [php] Invalid argument supplied for foreach() (/Applications/XAMPP/xamppfiles/htdocs/alfa_scorpi/protected/views/dashboard/index.php:288)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(869): DashboardController->renderFile()
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(782): DashboardController->renderPartial()
+#2 /Applications/XAMPP/xamppfiles/htdocs/alfa_scorpi/protected/controllers/DashboardController.php(271): DashboardController->render()
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(49): DashboardController->actionIndex()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(286): DashboardController->runAction()
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(265): DashboardController->runActionWithFilters()
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): DashboardController->run()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /Applications/XAMPP/xamppfiles/htdocs/alfa_scorpi/index.php(13): CWebApplication->run()
+REQUEST_URI=/alfa_scorpi/index.php/dashboard
+in /Applications/XAMPP/xamppfiles/htdocs/alfa_scorpi/protected/views/dashboard/index.php (288)
+in /Applications/XAMPP/xamppfiles/htdocs/alfa_scorpi/protected/controllers/DashboardController.php (271)
+in /Applications/XAMPP/xamppfiles/htdocs/alfa_scorpi/index.php (13)
+2016/07/13 12:33:38 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'f.nama' in 'field list'. The SQL statement executed was: SELECT 
+					CASE 
+						WHEN f.dealer_name is null THEN f.nama
+						ELSE f.dealer_name
+					END as sumber_order 
+					FROM prospect a 
+					left join user f on a.from_email = f.email
+					where a.id is not null AND a.created_at BETWEEN '2016-06-01 00:00:00' AND '2016-06-01 23:59:59'.
+in /Applications/XAMPP/xamppfiles/htdocs/alfa_scorpi/protected/controllers/DashboardController.php (152)
+in /Applications/XAMPP/xamppfiles/htdocs/alfa_scorpi/index.php (13)
+2016/07/13 12:33:38 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'f.nama' in 'field list'. The SQL statement executed was: SELECT 
+					CASE 
+						WHEN f.dealer_name is null THEN f.nama
+						ELSE f.dealer_name
+					END as sumber_order 
+					FROM prospect a 
+					left join user f on a.from_email = f.email
+					where a.id is not null AND a.created_at BETWEEN '2016-06-01 00:00:00' AND '2016-06-01 23:59:59'' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/alfa_scorpi/protected/controllers/DashboardController.php(152): CDbCommand->queryAll()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(49): DashboardController->actionIndex()
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): CController->run('')
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('dashboard')
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /Applications/XAMPP/xamppfiles/htdocs/alfa_scorpi/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/alfa_scorpi/index.php/dashboard
+HTTP_REFERER=http://localhost/alfa_scorpi/index.php/dashboard
+---
+2016/07/13 12:34:58 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'f.nama' in 'field list'. The SQL statement executed was: SELECT CASE 
+						WHEN f.dealer_name is null THEN f.nama
+						ELSE f.dealer_name
+					END as sumber_order 
+					FROM prospect a 
+					left join user f on a.from_email = f.email
+					where a.id is not null AND a.created_at BETWEEN '2016-06-01 00:00:00' AND '2016-06-01 23:59:59'.
+in /Applications/XAMPP/xamppfiles/htdocs/alfa_scorpi/protected/controllers/DashboardController.php (151)
+in /Applications/XAMPP/xamppfiles/htdocs/alfa_scorpi/index.php (13)
+2016/07/13 12:34:58 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'f.nama' in 'field list'. The SQL statement executed was: SELECT CASE 
+						WHEN f.dealer_name is null THEN f.nama
+						ELSE f.dealer_name
+					END as sumber_order 
+					FROM prospect a 
+					left join user f on a.from_email = f.email
+					where a.id is not null AND a.created_at BETWEEN '2016-06-01 00:00:00' AND '2016-06-01 23:59:59'' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/alfa_scorpi/protected/controllers/DashboardController.php(151): CDbCommand->queryAll()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(49): DashboardController->actionIndex()
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): CController->run('')
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('dashboard')
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /Applications/XAMPP/xamppfiles/htdocs/alfa_scorpi/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/alfa_scorpi/index.php/dashboard
+HTTP_REFERER=http://localhost/alfa_scorpi/index.php/dashboard
+---
